@@ -25,6 +25,8 @@ import { HistoryModule } from './history/history.module';
     }),
     UserModule,
     CarModule,
+    QuestionModule,
+    ExamModule,
   ],
   controllers: [AppController],
   providers: [AppService],

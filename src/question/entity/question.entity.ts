@@ -17,11 +17,12 @@ export class Question extends BaseEntity {
   @PrimaryGeneratedColumn('increment') id: number;
 
   @Column('varchar', { length: 500, nullable: false }) statement: string;
-  @Column('varchar', { nullable: false }) option1: string;
-  @Column('varchar', { nullable: false }) option2: string;
-  @Column('varchar', { nullable: false }) option3: string;
-  @Column('varchar', { nullable: false }) option4: string;
-  @Column('varchar', { nullable: false }) result: string;
+  @Column('varchar', { length: 255,nullable: false }) option1: string;
+  @Column('varchar', {length: 255, nullable: false }) option2: string;
+  @Column('varchar', { length: 255,nullable: false }) option3: string;
+  @Column('varchar', { length: 255,nullable: false }) option4: string;
+  @Column('varchar', { length: 255,nullable: false }) result: string;
+  @Column('varchar', { length: 255,nullable: false }) imgquiz: string;
 
   @ManyToMany(() => Session, (session) => session.questions)
   @JoinTable()
